@@ -2,6 +2,7 @@
 <html lang="es">
 
 <!-- BOOTSTRAP -->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +17,38 @@
 <body class="contenedorPrincipal">
     <header class="cabecero">
 
-        <div class="cabecero__logotipo">
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark" id="bg-color">
+            <!-- Brand -->
+            <a class="cabecero__logotipo navbar-brand" href="index.html">The Drummer</a>
+
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="btn btn-success nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ubicacion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- <div class="cabecero__logotipo">
             The Drummer
         </div>
 
@@ -26,7 +58,7 @@
             <a class="btn" href="pages/acerca_de_mi.html">Acerca de mí</a>
             <a class="btn" href="pages/grabaciones.html">Grabaciones</a>
             <a class="btn" href="pages/contacto.html">Servicios/Contacto</a>
-        </nav>
+        </nav> -->
 
 
     </header>
