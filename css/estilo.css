@@ -39,6 +39,7 @@ body {
   margin-left: 100px;
 }
 
+/* CABECERO */
 .navbar-light {
   background-color: #A3CD9E !important; 
   grid-area: cabecero;
@@ -47,13 +48,12 @@ body {
   position: fixed;
   right: 0;
   left: 0;
-  justify-content: stretch;
 }
 
-.btn{
+.btn-menu{
   color: darkslategray !important;
   background-color: #A3CD9E !important;
-  height: 50px;
+  height: 40px;
   text-decoration: none;
   display: inline-block;
   padding: 10px 22px;
@@ -67,7 +67,7 @@ body {
   margin: 10px;
 }
 
-.btn:before {
+.btn-menu:before {
   content: "";
   position: absolute;
   left: 50%;
@@ -82,7 +82,7 @@ body {
   z-index: -1;
 }
 
-.btn:after {
+.btn-menu:after {
   content: "";
   position: absolute;
   left: 55%;
@@ -97,18 +97,18 @@ body {
   z-index: -1;
 }
 
-.btn:hover {
+.btn-menu:hover {
   color: #ffffff !important;
   border: 1px solid darkslategray;
 }
 
-.btn:hover:before {
+.btn-menu:hover:before {
   top: -35%;
   background-color: darkslategray;
   transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
 
-.btn:hover:after {
+.btn-menu:hover:after {
   top: -45%;
   background-color: darkslategray;
   transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
@@ -133,7 +133,10 @@ body {
   margin-top: 150px;
   grid-area: contenido;
   display: grid;
+  display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .contenidoInicio__tituloPersona {
@@ -145,14 +148,6 @@ body {
   font-size: 20px;
 }
 
-main {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-
-
 .contenedorContacto {
   display: grid;
   grid-template-areas: "cabecero"
@@ -162,157 +157,19 @@ main {
   justify-content: center;
 }
 
-.servicios {
-  grid-area: servicios;
-  display: grid;
-  grid-template-areas: "serviciosTitulo serviciosTitulo"
-    "serviciosServicio serviciosInformacion"
-    "servicio1 informacion1"
-    "servicio2 informacion2"
-    "servicio3 informacion3"
-  ;
-  justify-content: stretch;
-}
-
 .serviciosTitulo {
-  grid-area: serviciosTitulo;
-  justify-self: center;
   font-size: 25px;
   padding-bottom: 50px;
 }
 
-.serviciosServicio {
-  grid-area: serviciosServicio;
-  justify-self: center;
-  padding: 20px;
-}
-
-.servicio1 {
-  grid-area: servicio1;
-  justify-self: end;
-  padding: 20px;
-}
-
-.servicio2 {
-  grid-area: servicio2;
-  justify-self: end;
-  padding: 20px;
-}
-
-.servicio3 {
-  grid-area: servicio3;
-  justify-self: end;
-  padding: 20px;
-  padding-bottom: 100px;
-}
-
-.serviciosInformacion {
-  grid-area: serviciosInformacion;
-  justify-self: center;
-  padding: 20px;
-}
-
-.informacion1 {
-  grid-area: informacion1;
-  padding: 20px;
-}
-
-.informacion2 {
-  grid-area: informacion2;
-  padding: 20px;
-}
-
-.informacion3 {
-  grid-area: informacion3;
-  padding: 20px;
-}
-
 .mainPrincipalContacto {
-  padding-top: 70px;
-  grid-area: principalContacto;
-  display: grid;
-  grid-template-areas: "titulo titulo"
-    "servicios contacto"
-    "mapa mapa";
-}
-
-.contacto {
-  display: grid;
-  grid-area: contacto;
-  grid-template-areas: "contactoTitulo contactoTitulo"
-    "contactoNombre contactoNombreText"
-    "contactoEmail contactoEmailText"
-    "contactoServicio contactoServicioSelect"
-    "contactoComentarios contactoComentarios"
-    "contactoComentariosText contactoComentariosText"
-    "contactoEnviar contactoEnviar"
-  ;
+  padding-top: 200px;
+  z-index: -2;
 }
 
 .contactoTitulo {
-  grid-area: contactoTitulo;
   font-size: 25px;
-  padding-top: 30px;
-  padding-bottom: 40px;
-  justify-self: center;
-}
-
-.contactoNombre {
-  grid-area: contactoNombre;
-  padding: 10px;
-}
-
-.contactoNombreText {
-  grid-area: contactoNombreText;
-  margin: 10px;
-  border-radius: .2rem;
-}
-
-.contactoEmail {
-  grid-area: contactoEmail;
-  padding: 10px;
-}
-
-.contactoEmailText {
-  grid-area: contactoEmailText;
-  margin: 10px;
-  border-radius: .2rem;
-}
-
-.contactoServicio {
-  grid-area: contactoServicio;
-  padding: 10px;
-}
-
-.contactoServicioSelect {
-  grid-area: contactoServicioSelect;
-  margin: 10px;
-  border-radius: .2rem;
-}
-
-.contactoComentarios {
-  grid-area: contactoComentarios;
-  padding: 10px;
-  padding-bottom: 5px;
-}
-
-.contactoComentariosText {
-  grid-area: contactoComentariosText;
-  margin: 10px;
-  border-radius: .2rem;
-}
-
-.contactoEnviar {
-  grid-area: contactoEnviar;
-  margin: 10px;
-  border-radius: .2rem;
-}
-
-.mapa {
-  grid-area: mapa;
-  width: 80%;
-  height: 200px;
-  justify-self: center;
+  padding-bottom: 50px;
 }
 
 .contenedorGrabaciones {
@@ -326,12 +183,13 @@ main {
 
 .mainPrincipalGrabaciones {
   grid-area: mainPrincipalGrabaciones;
-  margin-top: 80px;
+  margin-top: 120px;
   margin-bottom: 30px;
   display: grid;
   grid-template-areas: "titulo titulo"
     "video1 video2"
   ;
+  z-index: -2;
 }
 
 .video1 {
@@ -414,6 +272,11 @@ main {
   background-position: center;
 }
 
+.mainMiHistoria{
+  min-height: 715px;
+  margin-top: 110px;
+}
+
 .pieDePagina {
   display: grid;
   grid-area: pieDePagina;
@@ -438,17 +301,8 @@ main {
     margin-top: 220px;
   }
 
-  .mainPrincipalContacto {
-    display: grid;
-    padding-top: 250px;
-    grid-template-areas: "titulo"
-      "servicios"
-      "contacto"
-      "mapa";
-  }
-
   .mainPrincipalGrabaciones {
-    margin-top: 200px;
+    margin-top: 100px;
     margin-bottom: 30px;
     display: grid;
     grid-template-areas: "titulo"
@@ -464,19 +318,6 @@ main {
 
   .video2 {
     width: 300px;
-  }
-
-  .contenedorMiHistoria {
-    display: grid;
-    grid-template-rows: auto 100px auto;
-    grid-template-areas: "cabecero"
-      "mainMiHistoria"
-      "pieDePagina"
-    ;
-  }
-
-  .mainMiHistoria {
-    margin-top: 200px;
   }
 
   .galeria {
@@ -489,7 +330,7 @@ main {
 @media screen and (min-width: 426px) and (max-width: 1024px) {
 
   .mainPrincipalGrabaciones {
-    margin-top: 80px;
+    margin-top: 150px;
     margin-bottom: 30px;
     display: grid;
     grid-template-areas: "titulo"
@@ -507,30 +348,8 @@ main {
     width: 500px;
   }
 
-  .mainPrincipalContacto {
-    grid-template-columns: 50% 40%;
-  }
-
   .serviciosTitulo {
     margin-top: 40px;
-  }
-
-  .contactoTitulo {
-    padding-bottom: 80px;
-    align-self: start;
-  }
-
-  .contenedorMiHistoria {
-    display: grid;
-    grid-template-rows: auto 315px auto;
-    grid-template-areas: "cabecero"
-      "mainMiHistoria"
-      "pieDePagina"
-    ;
-  }
-
-  .mainMiHistoria {
-    margin-top: 100px;
   }
 
   .mainHomeStudio {
@@ -551,30 +370,14 @@ main {
     grid-column: 1/3;
   }
 
+  .mainMiHistoria{
+    margin-top: 150px;
+  }
+
 }
 
 /* Portátil */
 @media screen and (min-width: 1024px) and (max-width: 2560px) {
-  .mainPrincipalContacto {
-    grid-template-columns: 50% 40%;
-  }
-
-  .contactoTitulo {
-    padding-bottom: 35px;
-  }
-
-  .contenedorMiHistoria {
-    display: grid;
-    grid-template-rows: auto 450px auto;
-    grid-template-areas: "cabecero"
-      "mainMiHistoria"
-      "pieDePagina"
-    ;
-  }
-
-  .mainMiHistoria {
-    margin-top: 150px;
-  }
 
   .galeria {
     grid-template-columns: repeat(3, 1fr);
