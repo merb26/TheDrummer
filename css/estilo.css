@@ -326,11 +326,19 @@ video {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 250px);
   }
+
+  .contacto {
+    padding-top: 50px;
+    z-index: 0;
+  }
 }
 
 /* Tabletas normal horizontal */
 @media screen and (min-width: 426px) and (max-width: 1024px) {
 
+  .mainPrincipalGrabaciones{
+    margin-top: 150px;
+  }
 
   .videos{
     display: flex;
