@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../scss/estilo.css">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
     <title>The Drummer - Servicios/Contacto</title>
 </head>
@@ -45,13 +45,11 @@
         </nav>
     </header>
 
-    <main class="mainPrincipalContacto">
+    <main class="mainContacto container">
 
-        <div class="container-fluid">
-
-            <div class="row">
-                <section class="servicios col-xs-6 col-sm-6">
-                    <div class="serviciosTitulo">Servicios</div>
+            <div class="mainContacto__fila1 row">
+                <section class="mainContacto__fila1__servicios col-xs-6 col-sm-6">
+                    <div class="mainContacto__fila1__servicios__titulo">Servicios</div>
                     <table class="table">
                         <tr>
                             <th>Servicio</th>
@@ -75,8 +73,8 @@
 
                 </section>
 
-                <section class="contacto col-xs-6 col-sm-6">
-                    <div class="contactoTitulo">Contacto</div>
+                <section class="mainContacto__fila1__contacto col-xs-6 col-sm-6">
+                    <div class="mainContacto__fila1__contacto__titulo">Contacto</div>
                     <form action="">
                         <div class="form-group">
                             <label for="nombre">Nombre:</label>
@@ -117,17 +115,12 @@
                 </section>
             </div>
 
-            <div class="row">
+            <div class="mainContacto__fila2 row">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47401.136781746965!2d-99.05123091088657!3d19.323249042957375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce03cfcb2b0a95%3A0xb64d8861eedbf9a0!2sDacuStudios!5e0!3m2!1ses-419!2smx!4v1641970169819!5m2!1ses-419!2smx"
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" class="mapa col-12">
                 </iframe>
             </div>
-
-        </div>
-
-
-
     </main>
 
     <footer class="pieDePagina">

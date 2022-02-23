@@ -1,0 +1,420 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #E5F1E3;
+  overflow-x: hidden;
+  color: darkslategray;
+  /* justify-content: center; */
+}
+
+.contenedorPrincipal {
+  background-image: url(../img/bateria2.jpg);
+  background-size: center;
+  display: grid;
+  grid-template-rows: auto 750px auto;
+  grid-template-areas: "cabecero"
+    "contenido"
+    "pieDePagina";
+  justify-content: stretch;
+}
+
+.cabecero__logotipo {
+  color: darkslategray !important;
+  grid-area: logotipo;
+  font-size: 60px;
+  font-family: 'Amatic SC';
+  padding-left: 20px;
+  justify-self: center;
+}
+
+.cabecero__menu {
+  grid-area: menu;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 100px;
+}
+
+/* CABECERO */
+.navbar-light {
+  z-index: 1;
+  background-color: #A3CD9E !important;
+  grid-area: cabecero;
+  display: grid;
+  grid-template-areas: "logotipo menu";
+  position: fixed;
+  right: 0;
+  left: 0;
+}
+
+.btn-menu {
+  color: darkslategray !important;
+  background-color: #A3CD9E !important;
+  height: 40px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 22px;
+  border: 1px solid #4f4f4f;
+  border-radius: 4px;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  font-size: 17px;
+  z-index: 1;
+  margin: 10px;
+}
+
+.btn-menu:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.btn-menu:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: darkslategray;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.btn-menu:hover {
+  color: #ffffff !important;
+  border: 1px solid darkslategray;
+}
+
+.btn-menu:hover:before {
+  top: -35%;
+  background-color: darkslategray;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.btn-menu:hover:after {
+  top: -45%;
+  background-color: darkslategray;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.active {
+  color: #ffffff !important;
+  border: 1px solid darkslategray;
+  background-color: darkslategray !important;
+}
+
+.titulo {
+  font-size: 28px;
+  grid-area: titulo;
+  padding: 20px;
+  justify-self: center;
+}
+
+.contenidoInicio {
+  margin-top: 150px;
+  grid-area: contenido;
+  display: grid;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contenidoInicio__tituloPersona {
+  color: #E5F1E3;
+  font-size: 40px;
+}
+
+.contenidoInicio__tituloPersona__descripcion {
+  font-size: 20px;
+}
+
+.contenedorContacto {
+  display: grid;
+  grid-template-areas: "cabecero"
+    "principalContacto"
+    "pieDePagina"
+  ;
+  justify-content: center;
+}
+
+.serviciosTitulo {
+  font-size: 25px;
+  padding-bottom: 50px;
+}
+
+.mainPrincipalContacto {
+  padding-top: 200px;
+  z-index: 0;
+}
+
+.contactoTitulo {
+  font-size: 25px;
+  padding-bottom: 50px;
+}
+
+.contenedorGrabaciones {
+  display: grid;
+  grid-template-areas: "cabecero"
+    "mainPrincipalGrabaciones"
+    "pieDePagina"
+  ;
+}
+
+.mainPrincipalGrabaciones {
+  grid-area: mainPrincipalGrabaciones;
+  margin-top: 120px;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-areas: "titulo"
+    "videos"
+  ;
+}
+
+.videos{
+  display: flex;
+}
+
+.v{
+  padding: 20px;
+}
+
+video {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  border-radius: 1rem;
+  
+  
+}
+
+.contenedorHomeStudio {
+  display: grid;
+  grid-template-areas: "cabecero"
+    "mainHomeStudio"
+    "pieDePagina";
+  justify-content: stretch;
+}
+
+.mainHomeStudio {
+  grid-area: mainHomeStudio;
+  margin-top: 120px;
+  display: grid;
+  grid-template-areas: "titulo"
+    "galeria";
+  justify-content: stretch;
+}
+
+.galeria {
+  justify-content: stretch;
+  min-height: 600px;
+  display: grid;
+  padding: 20px;
+  grid-gap: 10px;
+}
+
+.imagen {
+  border-radius: .5em;
+}
+
+.imagen:hover {
+  transition: 1s;
+  transform: scale(1.1);
+}
+
+.item1 {
+  background-image: url(../img/homeStudio/1.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.item2 {
+  background-image: url(../img/homeStudio/2.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.item3 {
+  background-image: url(../img/homeStudio/3.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.item4 {
+  background-image: url(../img/homeStudio/4.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.item5 {
+  background-image: url(../img/homeStudio/5.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.item6 {
+  background-image: url(../img/homeStudio/6.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.mainMiHistoria {
+  min-height: 715px;
+  margin-top: 110px;
+}
+
+.historia1 {
+  background-image: url(../img/historia2.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+}
+
+.historia2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pieDePagina {
+  display: grid;
+  grid-area: pieDePagina;
+  background-color: #A3CD9E;
+}
+
+/* Móvil vertical */
+@media screen and (max-width: 426px) {
+
+  .cabecero__logotipo {
+    font-size: 50px;
+  }
+
+  .contenidoInicio {
+    margin-top: 220px;
+  }
+
+  .videos{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .v{
+    display: flex;
+    justify-content: center;
+  }
+
+  .galeria {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 250px);
+  }
+
+  .contacto {
+    padding-top: 50px;
+    z-index: 0;
+  }
+}
+
+/* Tabletas normal horizontal */
+@media screen and (min-width: 426px) and (max-width: 1024px) {
+
+  .mainPrincipalGrabaciones{
+    margin-top: 150px;
+  }
+
+  .videos{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .v{
+    display: flex;
+    justify-content: center;
+  }
+
+  .serviciosTitulo {
+    margin-top: 40px;
+  }
+
+  .mainHomeStudio {
+    margin-top: 160px;
+  }
+
+  .galeria {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 300px);
+  }
+
+  .item5 {
+    grid-column: 1/2;
+    grid-row: 2/4;
+  }
+
+  .item6 {
+    grid-column: 1/3;
+  }
+
+  .mainMiHistoria {
+    margin-top: 150px;
+  }
+
+}
+
+/* Portátil */
+@media screen and (min-width: 1024px) and (max-width: 2560px) {
+
+  .galeria {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 300px);
+  }
+
+  .item5 {
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+
+  .item6 {
+    grid-column: 2/4;
+    grid-row: 1/2;
+  }
+
+  .item1 {
+    grid-column: 2/3;
+    grid-row: 2/4;
+  }
+}
+
+/* ANIMACIONES */
+body {
+  animation: 3s aparicion 1;
+  transform-origin: top left;
+  /* animation-delay: 1s; */
+}
+
+@keyframes aparicion {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.9;
+  }
+}
