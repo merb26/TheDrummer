@@ -30,7 +30,9 @@
   grid-area: logotipo;
   font-size: 60px;
   font-family: 'Amatic SC';
-  padding-left: 20px;
+  margin-left: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
   -ms-grid-column-align: center;
       justify-self: center;
 }
@@ -47,16 +49,15 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-left: 100px;
+  margin-left: 150px;
 }
 
 * .navbar-light .cabecero__menu .btn-menu {
-  color: darkslategray !important;
   background-color: #a3cd9e !important;
-  height: 40px;
+  color: darkslategray !important;
   text-decoration: none;
   display: inline-block;
-  padding: 10px 22px;
+  padding: 6px 18px;
   border: 1px solid #4f4f4f;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in;
@@ -65,7 +66,7 @@
   overflow: hidden;
   font-size: 17px;
   z-index: 1;
-  margin: 10px;
+  margin: 5px 20px 0 0;
 }
 
 * .navbar-light .cabecero__menu .btn-menu:before {
@@ -122,16 +123,16 @@
 }
 
 * .navbar-light .cabecero__menu .btn-menu.active {
-  color: #ffffff !important;
   border: 1px solid darkslategray;
   background-color: darkslategray !important;
+  color: #ffffff !important;
 }
 
 * .titulo {
-  font-size: 28px;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: titulo;
+  font-size: 28px;
   padding: 20px;
       justify-self: center;
 }
@@ -141,8 +142,8 @@
   background-size: center;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: auto 750px auto;
-      grid-template-rows: auto 750px auto;
+  -ms-grid-rows: auto 850px auto;
+      grid-template-rows: auto 850px auto;
       grid-template-areas: "cabecero" "contenido" "pieDePagina";
   -webkit-box-pack: stretch;
       -ms-flex-pack: stretch;
@@ -183,12 +184,7 @@
   z-index: 0;
 }
 
-* .mainContacto__fila1__servicios__titulo {
-  font-size: 25px;
-  padding-bottom: 50px;
-}
-
-* .mainContacto__fila1__contacto__titulo {
+* .mainContacto__fila1__servicios__titulo, * .mainContacto__fila1__contacto__titulo {
   font-size: 25px;
   padding-bottom: 50px;
 }
@@ -221,10 +217,10 @@
 }
 
 * .contenedorGrabaciones .mainPrincipalGrabaciones .v video {
-  width: 100%;
   max-width: 720px;
-  height: auto;
   border-radius: 1rem;
+  width: 100%;
+  height: auto;
 }
 
 * .contenedorHomeStudio {
@@ -332,6 +328,12 @@
   -ms-grid-column: 1;
   grid-area: pieDePagina;
   background-color: #a3cd9e;
+  height: 100px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 @media screen and (max-width: 426px) {
@@ -459,7 +461,6 @@
           animation: 3s aparicion 1;
   -webkit-transform-origin: top left;
           transform-origin: top left;
-  /* animation-delay: 1s; */
 }
 
 @-webkit-keyframes aparicion {
