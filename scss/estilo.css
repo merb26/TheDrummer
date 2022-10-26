@@ -136,6 +136,10 @@
   font-size: 25px;
   padding-bottom: 50px;
 }
+* .mainContacto__fila2 {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
 * .contenedorGrabaciones {
   display: grid;
   grid-template-areas: "cabecero" "mainPrincipalGrabaciones" "pieDePagina";
