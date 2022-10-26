@@ -51,7 +51,7 @@ $colores: (
                 text-decoration: none;
                 display: inline-block;
                 padding: 6px 18px;
-                border: 1px solid #4f4f4f;
+                border: 1px solid darkslategray;
                 border-radius: 4px;
                 transition: all 0.2s ease-in;
                 position: relative;
@@ -59,6 +59,7 @@ $colores: (
                 font-size: 17px;
                 z-index: 1;
                 margin: 5px 20px 0 0;
+                box-shadow: none !important;
 
                 &:before {
                     content: "";
@@ -91,8 +92,9 @@ $colores: (
                     display: block;
                     transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
                     z-index: -1;
-                }
+                    box-shadow: none;
 
+                }
 
 
                 &:hover:before {
@@ -123,8 +125,7 @@ $colores: (
     }
 
     .contenedorPrincipal {
-        background-image: url(../img/bateria2.jpg);
-        background-size: center;
+        background: url(../img/bateria2.jpg) center / cover no-repeat;
         display: grid;
         grid-template-rows: auto 850px auto;    
         grid-template-areas: "cabecero"
